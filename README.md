@@ -1,6 +1,6 @@
-# Cleverbit Coding Task Task  
 
-# Overview
+
+# Cleverbit Coding Task - Overview
 
 # Client (front-end)
 
