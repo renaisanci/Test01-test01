@@ -1,27 +1,68 @@
-# Cleverbit Coding Task Task Template
+# Cleverbit Coding Task Task  
 
-This template should be used for coding tasks of Cleverbit.
+# Overview
 
-Three projects are included in this solution:
-- Cleverbit.CodingTask.Host: A .NET Core 3.1 Web Application
-- Cleverbit.CodingTask.Data: A .NET Core 3.1 class library which includes the first implementation of DB Context and User table.
-- Cleverbit.CodingTask.Utilities: A .NET Core 3.1 class library which includes the Hash Service.
+Web app template by the Microsoft Devices Software Experiences team.
 
-Database initialization has been implemented and configured in startup.
+# Client (front-end)
 
-Basic authentication has been implemented and wired to the User table in DbContext.
+- [React](https://reactjs.org/docs/getting-started.html)
+- [React Context API](https://reactjs.org/docs/context.html)
+- [Privite Route](https://reactjs.org/docs/context.html)
+- [dotEnv](https://www.npmjs.com/package/dotenv)
+ 
 
-An example API controller has been implemented as PingController which includes two GET methods, one without Authorization and the other one with Authorization.
+# Service (back-end)
 
-By default, db connection string is configured for SQL Express. This can be changed in appSettings.Development.json .
+- [ASP.NET Core 3.1](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
+- [Unit Of Work](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+- [EF COR](https://docs.microsoft.com/en-us/ef/core/)
+- [Repository](https://martinfowler.com/eaaCatalog/repository.html)
+- [DRY]( Don't repeat yourself )
+- [DDD]( https://martinfowler.com/tags/domain%20driven%20design.html) 
+- [Basic authentication](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/basic-authentication) 
+- [Swagger UI](https://github.com/swagger-api/swagger-ui)
 
-Following users are provisioned during startup:
+# How to run locally
 
-|UserName|Password|
-|-|-|
-|User1|Password1|
-|User2|Password2|
-|User3|Password3|
-|User4|Password4|
+1. [Download and install the .NET Core SDK](https://dotnet.microsoft.com/download)
+    * If you don't have `localdb` available on your system, [Download and install SQL Server Express](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb)
+```sh
+dotnet build
+dotnet run --project Microsoft.DSX.ProjectTemplate.API
+```
+3. Open your browser to: `https://localhost:44345/swagger`.
+4. In another terminal, navigate to the `client` folder and run the following `npm` commands:
+```sh
+npm install
+npm start
+```
+5. The webpack dev server hosts the front-end and your browser will open to: `http://localhost:3000`
 
-Example AJAX calls to ping APIs (with and without Authorization) are present under Cleverbit.CodingTask.Host/Views/index.html
+# Adding an Entity Framework Core migration
+
+1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
+2. `dotnet tool install --global dotnet-ef`
+3. `dotnet ef migrations add <NAME OF MIGRATION>`
+
+# Removing the latest Entity Framework Core migration
+
+1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
+2. `dotnet ef migrations remove`
+
+# To-Do back-end
+
+1. DotNet Dynamic Injector would be good
+2. Include Authorization logic
+3. Get Current Matches
+4. Get All Matches
+
+# To-Do front-end
+
+1. Submit Play
+2. List Matches
+3. List All matches
+
+
+ 
+
