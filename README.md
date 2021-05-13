@@ -35,18 +35,7 @@ dotnet run --project Microsoft.DSX.ProjectTemplate.API
 npm install
 npm start
 ```
-5. The webpack dev server hosts the front-end and your browser will open to: `http://localhost:3000`
-
-# Adding an Entity Framework Core migration
-
-1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
-2. `dotnet tool install --global dotnet-ef`
-3. `dotnet ef migrations add <NAME OF MIGRATION>`
-
-# Removing the latest Entity Framework Core migration
-
-1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
-2. `dotnet ef migrations remove`
+5. The front-end and your browser will open to: `http://localhost:3000`
 
 # To-Do back-end
 
