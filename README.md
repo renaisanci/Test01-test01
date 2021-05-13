@@ -2,8 +2,6 @@
 
 # Overview
 
-Web app template by the Microsoft Devices Software Experiences team.
-
 # Client (front-end)
 
 - [React](https://reactjs.org/docs/getting-started.html)
