@@ -1,4 +1,4 @@
-﻿namespace Cleverbit.CodingTask.Data.Models
+﻿namespace Cleverbit.CodingTask.Core.Entities
 {
     public class User
     {

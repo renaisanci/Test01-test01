@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Linq;
 using System.Security.Claims;
 
@@ -11,6 +13,14 @@ namespace Cleverbit.CodingTask.Host.Controllers
     [ApiController]
     public class PingController : ControllerBase
     {
+        private readonly ILogger<PingController> _logger;
+
+        public PingController(ILogger<PingController> logger)
+        {
+
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
+
         // GET: api/ping
         [HttpGet]
         public string Get()

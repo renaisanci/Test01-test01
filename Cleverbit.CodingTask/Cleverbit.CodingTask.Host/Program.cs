@@ -1,3 +1,4 @@
+using Cleverbit.CodingTask.Core.Interfaces;
 using Cleverbit.CodingTask.Data;
 using Cleverbit.CodingTask.Utilities;
 using Microsoft.AspNetCore.Hosting;
@@ -28,9 +29,10 @@ namespace Cleverbit.CodingTask.Host
 
                 try
                 {
+                    var uow = services.GetRequiredService<IUnitOfWork>();
                     var context = services.GetRequiredService<CodingTaskContext>();
                     var hashService = services.GetRequiredService<IHashService>();
-                    var task = Task.Run(async () => await context.Initialize(hashService));
+                    var task = Task.Run(async () => await context.Initialize(hashService, uow));
 
                     task.Wait();
                 }
