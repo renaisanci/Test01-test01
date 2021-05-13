@@ -47,7 +47,7 @@ npm start
 # To-Do front-end
 
 1. Submit Play
-2. List Matches
+2. Get Current Matches
 3. List All matches
 
 
